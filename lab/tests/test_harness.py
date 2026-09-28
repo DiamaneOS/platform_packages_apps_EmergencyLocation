@@ -16,7 +16,7 @@ class HarnessTest(unittest.TestCase):
     def setUpClass(cls): cls.classes = COMMON['compile_host']()
     def invoke(self, operation, data):
         return subprocess.run([COMMON['java_tool']('java'),'-cp',str(self.classes),
-            'org.diamaneos.emergencylocation.LabMain',operation],input=data,
+            'de.diamaneos.emergencylocation.LabMain',operation],input=data,
             stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=20)
     def test_production_endpoints_cannot_be_injected_into_scenarios(self):
         result = self.invoke('run',b'https_endpoint=https://example.org\n')

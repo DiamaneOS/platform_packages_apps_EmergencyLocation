@@ -51,7 +51,7 @@ def main():
         def probe(trusted):
             command=[COMMON['java_tool']('java')]
             if trusted: command += [f'-Djavax.net.ssl.trustStore={trust}','-Djavax.net.ssl.trustStorePassword=lab-only-password']
-            command += ['-cp',str(classes),'org.diamaneos.emergencylocation.TlsProbe',endpoint]
+            command += ['-cp',str(classes),'de.diamaneos.emergencylocation.TlsProbe',endpoint]
             return subprocess.check_output(command,text=True,timeout=20).strip()
         try:
             require(probe(False) == 'FAILED' and len(server.payloads) == 0, 'untrusted certificate accepted')

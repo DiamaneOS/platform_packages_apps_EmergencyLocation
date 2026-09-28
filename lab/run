@@ -12,7 +12,7 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parent.parent
-CORE = ROOT / 'src/org/diamaneos/emergencylocation'
+CORE = ROOT / 'src/de/diamaneos/emergencylocation'
 NAMES = ('AmlMessage', 'AmlSession', 'AmlProfile', 'AmlProfiles', 'HttpsSender', 'TrustedEvent', 'SmsPayload')
 
 def java_tool(name):
@@ -49,7 +49,7 @@ def main():
     if getattr(args, 'output', None) and args.output.exists():
         raise ValueError('output already exists; choose a new report path')
     classes = compile_host()
-    cmd = [java_tool('java'), '-cp', str(classes), 'org.diamaneos.emergencylocation.LabMain', args.command]
+    cmd = [java_tool('java'), '-cp', str(classes), 'de.diamaneos.emergencylocation.LabMain', args.command]
     data = None
     if args.command == 'run':
         if args.scenario.stat().st_size > 65536: raise ValueError('scenario exceeds 64 KiB')

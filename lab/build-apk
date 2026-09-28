@@ -29,7 +29,7 @@ def main():
         if not p.is_file(): parser.error('missing SDK component: ' + str(p))
     manifest = HERE/'android/AndroidManifest.xml'
     root = ET.parse(manifest).getroot()
-    if root.attrib['package'] != 'org.diamaneos.emergencylocation.lab':
+    if root.attrib['package'] != 'de.diamaneos.emergencylocation.lab':
         raise ValueError('unexpected lab package')
     for tag in ('uses-permission', 'instrumentation', 'receiver', 'service', 'provider'):
         if any(root.iter(tag)):
@@ -70,7 +70,7 @@ def main():
     if 'uses-permission' in manifest_dump: raise ValueError('unexpected permission in built APK')
     digest = hashlib.sha256(apk.read_bytes()).hexdigest()
     metadata = {'artifact':apk.name,'sha256':digest,'bytes':apk.stat().st_size,
-                'package':'org.diamaneos.emergencylocation.lab','permissions':[],
+                'package':'de.diamaneos.emergencylocation.lab','permissions':[],
                 'min_sdk':35,'device_execution_verified':False,'production_signing':False,
                 'source_sha256':{str(p.relative_to(HERE.parent)):hashlib.sha256(p.read_bytes()).hexdigest()
                                  for p in sources+[manifest]+sorted((HERE/'scenarios').glob('*.properties'))}}

@@ -6,8 +6,8 @@ index 5c9e490087ac..4fa9a3b9d071 100644
      <!-- ================================================ -->
      <eat-comment />
  
-+    <protected-broadcast android:name="org.diamaneos.emergencylocation.action.CALL" />
-+    <protected-broadcast android:name="org.diamaneos.emergencylocation.action.SMS" />
++    <protected-broadcast android:name="de.diamaneos.emergencylocation.action.CALL" />
++    <protected-broadcast android:name="de.diamaneos.emergencylocation.action.SMS" />
      <protected-broadcast android:name="android.intent.action.SCREEN_OFF" />
      <protected-broadcast android:name="android.intent.action.SCREEN_ON" />
      <protected-broadcast android:name="android.intent.action.USER_PRESENT" />
@@ -46,9 +46,9 @@ index 000000000000..6deb0f0fc634
 +
 +/** Supplementary location notification; never waits for location or controls a call. */
 +final class EmergencyLocationDispatcher {
-+    static final String CALL = "org.diamaneos.emergencylocation.action.CALL";
-+    static final String SMS = "org.diamaneos.emergencylocation.action.SMS";
-+    private static final String PACKAGE = "org.diamaneos.emergencylocation";
++    static final String CALL = "de.diamaneos.emergencylocation.action.CALL";
++    static final String SMS = "de.diamaneos.emergencylocation.action.SMS";
++    private static final String PACKAGE = "de.diamaneos.emergencylocation";
 +    private final Context mContext;
 +    private final Handler mHandler;
 +    private int mPending;
@@ -225,7 +225,7 @@ index 000000000000..e25853f58a58
 +        assertEquals(2, context.events.size());
 +        Intent event = context.events.get(0);
 +        assertEquals(
-+                "org.diamaneos.emergencylocation.EmergencyReceiver",
++                "de.diamaneos.emergencylocation.EmergencyReceiver",
 +                event.getComponent().getClassName());
 +        assertEquals(1, event.getIntExtra("phone", -1));
 +        assertEquals(7, event.getIntExtra("subscription", -1));
