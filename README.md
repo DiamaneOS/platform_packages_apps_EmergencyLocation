@@ -1,9 +1,9 @@
 # DiamaneOS Emergency Location
 
-**Development deferred.** This repository preserves the independent Advanced
-Mobile Location (AML) implementation and lab tools for later work. It is not a
+**Not part of DiamaneOS.** This repository holds an independent Advanced Mobile
+Location (AML) implementation and lab tools. It is not in the build and not a
 shipping or qualified emergency-location service. Production receiver profiles
-are empty, and the component should remain outside the active product manifest.
+are empty, and the component stays outside the product manifest.
 
 Android source location: `packages/apps/EmergencyLocation`.
 
@@ -32,5 +32,5 @@ loopback socket. [Lab instructions](lab/README.md) cover custom scenarios and
 building the standalone APK. Nothing is installed or sent to a real recipient.
 
 Prior source/API checks, synthetic tests and local TLS tests do not establish
-native telephony behavior or emergency-centre delivery. The remaining work is
+native telephony behavior or emergency-centre delivery. Open points are
 listed in [integration](docs/integration.md) and [verification](docs/verification.md).

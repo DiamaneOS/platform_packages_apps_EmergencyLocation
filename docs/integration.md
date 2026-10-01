@@ -1,10 +1,11 @@
-# Future integration
+# Integration
 
-Development is deferred; these steps preserve a future path, not an instruction
-to enable the app in current builds.
+The app is not part of the build; these steps describe what integrating it would
+take, not an instruction to enable it.
 
-1. Check out this repository at `packages/apps/EmergencyLocation` only when AML
-   work resumes. Retain ordinary emergency calling and carrier location separately.
+1. Check out this repository at `packages/apps/EmergencyLocation` only to
+   integrate AML deliberately. Retain ordinary emergency calling and carrier
+   location separately.
 2. Inspect the framework source. The patch in `integration/` is bound to its
    provenance JSON and supplies trusted call/SMS events. Rebase and review it if
    necessary; never apply it twice. Build and run its native authorization tests.

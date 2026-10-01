@@ -1,5 +1,5 @@
-> Development deferred. These tools preserve the existing AML work for a future
-> integration; no production receiver profile is enabled.
+> AML is not part of the build. These tools exercise the AML code; no production
+> receiver profile is enabled.
 
 # Emergency connectivity lab
 

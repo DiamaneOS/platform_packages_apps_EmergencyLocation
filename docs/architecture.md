@@ -25,6 +25,6 @@ package. It has no production activation hook, privileged instrumentation target
 real SMS sender or live recipient configuration. Its results are simulation
 results, not proof of emergency-service reception.
 
-Development is deferred. No Google-dependent backend has been selected, and no
-production region is configured. Keep ordinary emergency calling and carrier
+The app is not part of the build. No Google-dependent backend has been
+selected, and no production region is configured. Keep ordinary emergency calling and carrier
 location independent of whether this optional app exists or works.

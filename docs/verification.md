@@ -1,4 +1,4 @@
-# Verification and deferred work
+# Verification and open points
 
 The host suite tests the shared catalogue/parser, identity policy, location
 session, event predicates, message encoders, SMS packing and HTTPS behavior. The
@@ -15,6 +15,6 @@ Host/API compilation and simulations are not native acceptance. Still open:
 - Before-unlock, process death, deadline, DNS-stall and wakelock tests on Android.
 - End-to-end emergency recipient receipt and correlation with the actual call.
 
-AML is a deferred component. VoLTE, VoWiFi, ordinary emergency calls and existing
+AML is not part of the build. VoLTE, VoWiFi, ordinary emergency calls and existing
 carrier emergency-location work continue in their own components. Their test
 results must not be reported as AML results, or vice versa.

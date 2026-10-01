@@ -30,16 +30,9 @@ Example **for schema illustration only**, never a production receiver:
 older data-SMS packing. The app does not send ordinary text SMS, override an
 SMSC or select an undocumented port. Messages use synthetic fixtures in tests.
 
-For Germany, the factory ELS configuration inspected so far did not provide a
-verified static receiver profile. Public Google documentation describes
-[operator-defined handset configuration](https://developers.google.com/android/els/fundamentals).
-A complete verified stock runtime profile may be used as evidence for matching
-stock defaults; extracting a destination string alone does not establish its
-format, routing or correlation rules. No public test endpoint is assumed.
-
-Ask the operator for the fields above, including 112 versus 110 scope, roaming,
-no-SIM handling and an approved verification process when there is no test
-backend. This is a technical interoperability question, not a request to invent
+Ask the operator for the fields above, including which emergency numbers are in
+scope, roaming, no-SIM handling and an approved verification process when there
+is no test backend. This is a technical interoperability question, not a request to invent
 new emergency infrastructure. No test message should be sent to a live receiver
 as an endpoint-discovery technique.
 
