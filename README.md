@@ -1,9 +1,12 @@
 # DiamaneOS Emergency Location
 
-**Not part of DiamaneOS.** This repository holds an independent Advanced Mobile
-Location (AML) implementation and lab tools. It is not in the build and not a
-shipping or qualified emergency-location service. Production receiver profiles
-are empty, and the component stays outside the product manifest.
+**Not part of DiamaneOS.** An independent Advanced Mobile Location (AML)
+implementation with lab tools.
+
+- Not in the build or the product manifest; not a shipping or qualified
+  emergency-location service. Production receiver profiles are empty.
+- It does not implement VoLTE, VoWiFi, emergency-call routing or the modem's
+  carrier-location mechanisms. Those stay separate from this optional AML path.
 
 Android source location: `packages/apps/EmergencyLocation`.
 
@@ -15,8 +18,6 @@ Android source location: `packages/apps/EmergencyLocation`.
 - `lab/`: configurable host scenarios, loopback TLS tests and a separate
   zero-permission Android simulator.
 
-The app does not implement VoLTE, VoWiFi, emergency-call routing or the modem's
-carrier-location mechanisms. Those remain separate from this optional AML path.
 See [source provenance](PROVENANCE.md) and [architecture](docs/architecture.md).
 
 ## Preserved verification
@@ -27,10 +28,11 @@ See [source provenance](PROVENANCE.md) and [architecture](docs/architecture.md).
 ./lab/tls-smoke
 ```
 
-Requires Python 3 and JDK 17+. The TLS check additionally uses OpenSSL and a
-loopback socket. [Lab instructions](lab/README.md) cover custom scenarios and
-building the standalone APK. Nothing is installed or sent to a real recipient.
-
-Prior source/API checks, synthetic tests and local TLS tests do not establish
-native telephony behavior or emergency-centre delivery. Open points are
-listed in [integration](docs/integration.md) and [verification](docs/verification.md).
+- Needs Python 3 and JDK 17+; the TLS check also needs OpenSSL and a loopback
+  socket. Nothing is installed or sent to a real recipient.
+- [Lab instructions](lab/README.md) cover custom scenarios and building the
+  standalone APK.
+- Earlier source/API checks, synthetic tests and local TLS tests do not
+  establish native telephony behavior or emergency-centre delivery. Open
+  points: [integration](docs/integration.md) and
+  [verification](docs/verification.md).
