@@ -9,5 +9,8 @@ binder_use(diamaneos_emergency_location_app)
 allow diamaneos_emergency_location_app { app_api_service radio_service }:service_manager find;
 allow diamaneos_emergency_location_app app_data_file:dir create_dir_perms;
 allow diamaneos_emergency_location_app app_data_file:{ file lnk_file } create_file_perms;
-neverallow diamaneos_emergency_location_app self:{ qipcrtr_socket tipc_socket rawip_socket packet_socket } *;
+# No rawip_socket rule: platform net.te lets every netdomain, ordinary apps
+# included, create one on itself, so the rule could not compile. SOCK_RAW also
+# needs CAP_NET_RAW, which the capability rule forbids.
+neverallow diamaneos_emergency_location_app self:{ qipcrtr_socket tipc_socket packet_socket } *;
 neverallow diamaneos_emergency_location_app self:global_capability_class_set *;
