@@ -6,7 +6,7 @@
     "core/res/AndroidManifest.xml": "36d804d7dd978faaa3eda519b7728e06c4e6de0d0180f521886cb41cc3bb0482"
   },
   "status": "call/SMS bridge and native tests prepared; dispatcher API compile passes; full framework/native tests pending",
-  "patch_sha256": "d131b90b0ff2de564ad60c86fe18621d6c608a8e5d51c36bc8f9523b917c8b75",
+  "patch_sha256": "d82e91e36e9adb82b159d04621c21664d187de7e382a566d8ac931f5e061d634",
   "downstream_repository": "https://github.com/DiamaneOS/platform_frameworks_base",
   "downstream_revision": "1f7570d17a837388ddf136c24a206efd3776ca3f"
 }
