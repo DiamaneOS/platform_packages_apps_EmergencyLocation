@@ -18,7 +18,9 @@ signing-key tag. The AML runtime Java implementation is unchanged. IMS DCM,
 EIMS data connections, the IMS broker, emergency APN tooling and its device
 prerequisite checker remain in the IMS repository.
 
-The framework patch is preserved unchanged. Its original downstream commit may
-still exist on historical or integration branches; inspect the selected framework
+The framework patch is preserved apart from the package rename to
+`de.diamaneos`; `patch_sha256` in its provenance record is that of the renamed
+patch, and the host tests check it. Its original downstream commit may still
+exist on historical or integration branches; inspect the selected framework
 revision before applying it. Do not apply it twice or mistake its presence for
 an enabled AML app.

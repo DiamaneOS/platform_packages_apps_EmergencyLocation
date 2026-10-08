@@ -18,4 +18,11 @@ mkdir -p tests/out/core
 "$JAVA" -cp tests/out/core de.diamaneos.emergencylocation.SimulationTest
 "$JAVA" -cp tests/out/core de.diamaneos.emergencylocation.TransportTest
 "$JAVA" -cp tests/out/core de.diamaneos.emergencylocation.CatalogTest
+python3 - <<'EOF'
+import hashlib, json
+record = json.load(open('integration/frameworks-base-provenance.json'))
+patch = open('integration/frameworks-base-emergency-location.patch', 'rb').read()
+if hashlib.sha256(patch).hexdigest() != record['patch_sha256']:
+    raise SystemExit('framework patch does not match its provenance record')
+EOF
 python3 -m unittest discover -s lab/tests -v
