@@ -1,7 +1,7 @@
 # Source provenance
 
-Imported from [DiamaneOS/hardware_diamaneos_ims](https://github.com/DiamaneOS/hardware_diamaneos_ims/tree/15f7a6f8947486b76b2d348d6e02204b1d2bc62c)
-at `15f7a6f8947486b76b2d348d6e02204b1d2bc62c`. Original development history and
+Imported from [DiamaneOS/hardware_diamaneos_ims](https://github.com/DiamaneOS/hardware_diamaneos_ims/tree/406ddbb17c0d998e495c99b9c4dda32f38768d2c)
+at `406ddbb17c0d998e495c99b9c4dda32f38768d2c`. Original development history and
 attribution remain available at that immutable revision. Existing copyright and
 SPDX notices are preserved.
 
