@@ -3,7 +3,7 @@
  */
 package de.diamaneos.emergencylocation;
 
-/** AML's ASCII subset packed into a data-SMS body; port/packing are receiver policy. */
+/** AML's ASCII subset packed into a data-SMS body. Port and packing are receiver policy. */
 final class SmsPayload {
     static byte[] pack(String value, boolean legacyMsbFirst) {
         int bits = Math.multiplyExact(value.length(), 7);

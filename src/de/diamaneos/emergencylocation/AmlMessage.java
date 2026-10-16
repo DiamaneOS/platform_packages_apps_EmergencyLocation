@@ -180,7 +180,7 @@ final class AmlMessage {
         fields.put("location_time", Long.toString(fix == null ? failureUtcMs : fix.utcMs));
         fields.put("location_confidence", fix == null ? "0" : "0.68");
         fields.put("location_source", fix == null ? "unknown" : fix.source);
-        // Full IMSI is the standard HTTPS form; partial/omitted metadata requires
+        // Full IMSI is the standard HTTPS form. Partial or omitted metadata requires
         // an explicit receiver profile. Never invent zeros for unknown identifiers.
         putKnown(fields, "device_imsi", useFullImsi ? id.fullImsi : id.partialImsi);
         putKnown(fields, "device_imei", id.imei);

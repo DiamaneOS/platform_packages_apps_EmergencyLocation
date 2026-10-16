@@ -6,7 +6,7 @@ package de.diamaneos.emergencylocation;
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
 
-/** Host-only transport probe; the only permitted destination is IPv4 loopback. */
+/** Host-only transport probe. The only permitted destination is IPv4 loopback. */
 public final class TlsProbe {
     public static void main(String[] args) {
         URI endpoint = URI.create(args[0]);

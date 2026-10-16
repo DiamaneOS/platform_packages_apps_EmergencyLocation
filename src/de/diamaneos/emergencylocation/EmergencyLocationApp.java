@@ -108,7 +108,7 @@ public final class EmergencyLocationApp extends Application {
     }
 
     private void begin(String number, int subId, int phoneId, String source, long eventUtc) {
-        // Bound independent work; never block, reject or redial a voice call.
+        // Bound independent work. Never block, reject or redial a voice call.
         if (phoneId < 0 || phoneId >= telephony.getActiveModemCount() || eventUtc <= 0) return;
         if (active.stream()
                 .anyMatch(
